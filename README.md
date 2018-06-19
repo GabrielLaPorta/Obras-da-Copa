@@ -10,11 +10,10 @@ MEAN STACK - MongoDB, Express, Angular.js e Node.js.
 
 ## Uso
 
-1.Instalar
-    `npm install`
-    
+1.Instalar  
+    `npm install`  
     MongoDB
 
-2.Executar
-    `node app`
+2.Executar  
+    `node app`  
     `mongod`
