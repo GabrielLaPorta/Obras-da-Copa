@@ -11,9 +11,9 @@ MEAN STACK - MongoDB, Express, Angular.js e Node.js.
 ##Uso
 
 1.Instalar
-    *npm install
-    *MongoDB
+    <npm install>
+    MongoDB
 
 2.Executar
-    *node app
-    *mongod
+    <node app>
+    <mongod>
