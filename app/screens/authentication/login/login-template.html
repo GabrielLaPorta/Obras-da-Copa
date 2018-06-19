@@ -1,0 +1,18 @@
+<section class="container-fluid">
+    <form class="col-6 formValidation" novalidate>
+        <h3>Entrar</h3>
+        <div class="form-group">
+            <label>Nome de Usuário</label>
+            <span class="alert alert-danger" data-ng-if="vm.message">{{vm.message}}</span>
+            <input type="text" data-ng-model="vm.login.username" class="form-control" placeholder="Nome de usuario">
+            <label>Senha</label>
+            <input type="password" data-ng-model="vm.login.password" class="form-control" placeholder="Senha">
+            <button class="btn btn-dark btnValidation" data-ng-disabled="!vm.login.password || !vm.login.username" data-ng-click="vm.loginUser()">
+                Entrar
+            </button>
+            <button class="btn btn-success btnValidation" data-ui-sref="insertUser">
+                Registrar-se
+            </button>
+        </div>
+    </form>
+</section>

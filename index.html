@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-ng-app="constructionCup">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/style/style.css">
+    <base href="/">
+    <title>Obras da Copa</title>
+</head>
+
+<body data-ng-class="[$root.isDarkTheme ? 'theme-dark' : 'theme-light']">
+    <button class="btn" data-ng-class="[$root.isDarkTheme ? 'btn-light' : 'btn-dark']" data-ng-click="$root.isDarkTheme = !$root.isDarkTheme">
+        Tema {{$root.isDarkTheme ? 'Claro' : 'Escuro'}}
+    </button>
+    <header>
+        <h1>Obras da Copa</h1>
+        <h4>Gastos com obras da Copa de 2014 em Porto Alegre</h4>
+        <menu></menu>
+    </header>
+    <div ui-view></div>
+    <!-- Libs -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Chart -->
+    <script src="/node_modules/chart.js/dist/Chart.js"></script>
+    <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <!-- Modules -->
+    <script src="/app/app.module.js"></script>
+    <script src="/app/app.route.js"></script>
+    <!-- Controllers -->
+    <script src="/app/screens/report/report.controller.js"></script>
+    <script src="/app/screens/statistics/construction/statisticConstruction.controller.js"></script>
+    <script src="/app/screens/statistics/company/statisticCompany.controller.js"></script>
+    <script src="/app/screens/authentication/insert/insert.controller.js"></script>
+    <script src="/app/screens/authentication/login/login.controller.js"></script>
+    <!-- Config -->
+    <script src="/app/core/config/http.config.js"></script>
+    <script src="/app/core/config/resource.config.js"></script>
+    <!-- Services -->
+    <script src="/app/core/services/dataConstruction.service.js"></script>
+    <script src="/app/core/services/helper.service.js"></script>
+    <!-- Constant -->
+    <script src="/app/core/constant/settings.constant.js"></script>
+    <!-- Widgets -->
+    <script src="/app/widgets/comment/comments.diretive.js"></script>
+    <script src="/app/widgets/menu/menu.directive.js"></script>
+    <script src="/app/widgets/menu/menuLink.directive.js"></script>
+</body>
+
+</html>

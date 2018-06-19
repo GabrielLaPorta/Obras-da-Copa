@@ -1,0 +1,35 @@
+<nav class="nav-fill" data-ng-class="[$root.isDarkTheme ? 'navbar-dark' : 'navbar-light']">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" data-menu-link="home">
+                Início
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-menu-link="report">
+                Relatório
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-menu-link="constructionStatistics">
+                Estatísticas de Obras
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-menu-link="companyStatistics">
+                Estatísticas de Construtoras
+            </a>
+        </li>
+        <li class="nav-item" data-ng-if="!$root.username">
+            <a class="nav-link" data-menu-link="login">
+                Entrar
+            </a>
+        </li>
+        <li class="nav-item" data-ng-if="$root.username">
+            <a class="nav-link" data-ng-click="logout()">
+                Sair
+            </a>
+        </li>
+    </ul>
+</nav>
+<span class="username" data-ng-show="$root.username">Olá {{$root.username}}</span>

@@ -1,0 +1,123 @@
+.nav-link {
+    cursor: pointer;
+}
+
+#cardReport,
+#cardStatistic {
+    margin-left: 11%;
+    width: 77%;
+    height: 103%;
+}
+
+.card-body,
+.card-header {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+header {
+    text-align: center;
+}
+
+.btnSearch {
+    text-align: center;
+    margin-left: 40%;
+}
+
+menu {
+    padding: 0;
+}
+
+.formValidation {
+    margin-top: 5%;
+    margin-left: 24%;
+}
+
+.btnSaveComment {
+    margin-left: 86%;
+    margin-right: 1%;
+}
+
+.btnAddComment {
+    margin-top: 2%;
+    margin-left: 85%;
+}
+
+.btnComments {
+    margin-left: 43%;
+}
+
+.btnValidation {
+    margin-top: 1%;
+}
+
+.div-cards {
+    margin-bottom: 50px;
+}
+
+.comments {
+    margin-top: 2%;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.theme-dark {
+    background: #27272c;
+    color: white;
+}
+
+.theme-dark .card-body {
+    background-color: #27272c;
+}
+
+.theme-dark .card-header,
+.theme-dark .jumbotron {
+    background-color: #48484e;
+}
+
+.theme-dark .navbar-dark,
+.theme-dark button.btn-secondary {
+    background-color: #48484e;
+}
+
+.theme-light .navbar-light,
+.theme-light button.btn-secondary {
+    background-color: #94949c;
+    color: black;
+}
+
+.theme-light .card-header {
+    background-color: #94949c;
+}
+
+.theme-light #cardReport,
+.theme-light #cardStatistic,
+.theme-light .navbar-light {
+    border: 1px solid #94949c;
+}
+
+.table-container-fixed tbody {
+    display: grid;
+    height: 200px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-container-fixed thead,
+.table-container-fixed thead tr,
+.table-container-fixed td,
+.table-container-fixed th {
+    display: block;
+}
+
+.table-container-fixed tbody td,
+.table-container-fixed thead tr th {
+    float: left;
+}
+
+.table-container-fixed tbody tr td {
+    border-top: none;
+}

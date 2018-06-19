@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <h3>Estatísticas de Obras</h3>
+        <form class="form-group" novalidate>
+            <label for="campos">Campos (obrigatório) selecione todos para melhores resultados</label>
+            <select class="custom-select" data-ng-model="vm.fieldList" multiple>
+                <option ng-repeat="option in vm.fieldSelectOptions" value="{{option.id}}">{{option.name}}</option>
+            </select>
+            <label for="ano">Ano</label>
+            <select class="custom-select" data-ng-model="vm.year">
+                <option ng-repeat="option in vm.yearSelectOptions" value="{{option.id}}">{{option.name}}</option>
+            </select>
+            <label for="obra">Obra</label>
+            <select class="custom-select" data-ng-model="vm.construction">
+                <option ng-repeat="option in vm.constructSelectOptions" value="{{option.id}}">{{option.name}}</option>
+            </select>
+            <button data-ng-disabled="!vm.fieldList" class="btn btn-outline-success btnSearch" data-ng-click="vm.search()">
+                Buscar Dados
+            </button>
+            <button class="btn btn-outline-danger" data-ng-click="vm.clearFilters()">
+                Limpar Filtros
+            </button>
+        </form>
+    </div>
+    <article class="container-fluid" data-ng-show="vm.chartAllConstruction.data.labels" id="chart-container-construction">
+        <h3>Valores Gastos com Obra</h3>
+    </article>
+</section>
+<footer>
+    <comments></comments>
+</footer>

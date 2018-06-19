@@ -1,0 +1,15 @@
+<section class="container-fluid">
+    <form class="col-lg-6 formValidation" novalidate>
+        <h3>Registrar-se</h3>
+        <div class="form-group">
+            <label>Nome de Usuário</label>
+            <span class="alert alert-danger" data-ng-if="vm.message">{{vm.message}}</span>
+            <input type="text" data-ng-model="vm.insertUser.username" class="form-control" placeholder="Nome de usuário">
+            <label>Senha</label>
+            <input type="password" data-ng-model="vm.insertUser.password" class="form-control" placeholder="Senha">
+            <button class="btn btn-success btnValidation" data-ng-click="vm.saveUser()">
+                Salvar
+            </button>
+        </div>
+    </form>
+</section>

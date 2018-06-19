@@ -1,0 +1,53 @@
+<section>
+    <div class="container-fluid comments">
+        <button class="btn btn-secondary btnComments" data-ng-click="vm.showComments = !vm.showComments">
+            Mostrar Comentários
+        </button>
+    </div>
+    <div class="container-fluid" data-ng-if="vm.showComments">
+        <button data-ng-show="!vm.editCommentAreaOpened" class="btn btn-secondary btnAddComment" data-ng-click="$root.username ? vm.openCreateCommentArea() : vm.goToLogin()">
+            Adicionar Comentário
+        </button>
+        <span class="alert alert-success" data-ng-if="vm.message">{{vm.message}}</span>
+        <form class="form-group" data-ng-if="vm.editCommentAreaOpened" novalidade>
+            <label>Comentário:</label>
+            <br>
+            <textarea class="form-control" maxlength="100" rows="5" cols="40" data-ng-model="vm.commentToSave.comment">
+            </textarea>
+            <button data-ng-disabled="!vm.commentToSave.comment" class="btn btn-success btnSaveComment" data-ng-click="vm.saveComment()">
+                Salvar
+            </button>
+            <button class="btn btn-danger" data-ng-click="vm.editCommentAreaOpened = false">
+                Cancelar
+            </button>
+        </form>
+        <table id="table-comment" class="table table-hover" data-ng-class="[$root.isDarkTheme ? 'table-dark' : 'table-light']">
+            <thead>
+                <tr>
+                    <th width="36%">Comentário</th>
+                    <th width="20%">Data do Post</th>
+                    <th width="28%">Usuário</th>
+                    <th width="13%"></th>
+                    <th width="13%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="item in vm.comments">
+                    <td>{{item.comment}}</td>
+                    <td>{{item.dateTime | date : 'yyyy-MM-dd HH:mm'}}</td>
+                    <td>{{item.username}}</td>
+                    <td>
+                        <button class="btn btn-success" data-ng-show="item.update" data-ng-click="vm.openEditCommentArea(item)">
+                            Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" data-ng-show="item.delete" data-ng-click="vm.deleteComment(item)">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

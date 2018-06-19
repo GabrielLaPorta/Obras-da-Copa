@@ -1,0 +1,66 @@
+<section>
+    <div class="container-fluid">
+        <h3>Relatório</h3>
+        <form class="formConstructions" novalidate>
+            <div class="form-group row">
+                <div class="col-lg-6">
+                    <label>Campos (obrigatório)</label>
+                    <select class="form-control custom-select" data-ng-model="vm.fieldList" multiple>
+                        <option ng-repeat="option in vm.fieldSelectOptions" value="{{option.id}}">
+                            {{option.name}}
+                        </option>
+                    </select>
+                    <label>Obra</label>
+                    <select class="form-control custom-select" data-ng-model="vm.construction">
+                        <option ng-repeat="option in vm.constructSelectOptions" value="{{option.id}}">
+                            {{option.name}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label>Ano</label>
+                    <select class="form-control custom-select" data-ng-model="vm.year">
+                        <option ng-repeat="option in vm.yearSelectOptions" value="{{option.id}}">
+                            {{option.name}}</option>
+                    </select>
+                    <label>Construtora</label>
+                    <select class="custom-select" data-ng-model="vm.company">
+                        <option ng-repeat="option in vm.companySelectOptions" value="{{option.id}}">
+                            {{option.name}}</option>
+                    </select>
+                    <label>Limite de Linhas</label>
+                    <select class="custom-select" data-ng-model="vm.limit">
+                        <option ng-repeat="option in vm.limitSelectOptions" value="{{option.id}}">
+                            {{option.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <button data-ng-disabled="!vm.fieldList" class="btn btn-outline-success btnSearch" data-ng-click="vm.search()">
+                Buscar Dados
+            </button>
+            <button class="btn btn-outline-danger" data-ng-click="vm.clearFilters()">
+                Limpar Filtros
+            </button>
+        </form>
+    </div>
+    <div class="container-fluid" data-ng-if="vm.companyList">
+        <table class="table table-hover table-container-fixed" data-ng-class="[$root.isDarkTheme ? 'table-dark' : 'table-light']">
+            <thead>
+                <tr>
+                    <th data-ng-repeat="field in vm.field" data-ng-style="vm.getCellWidthStyle()">
+                        {{vm.getFieldName(field)}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="row in vm.companyList">
+                    <td data-ng-repeat="column in row" data-ng-style="vm.getCellWidthStyle()">
+                        {{vm.verifyIsNumber(row[vm.field[$index]])}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<footer>
+    <comments></comments>
+</footer>
