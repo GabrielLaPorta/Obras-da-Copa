@@ -8,15 +8,13 @@ O OBRAS DA COPA apresenta os dados de obras da Copa 2014 em Porto Alegre, dispon
 # Tecnologias Usadas:
 MEAN STACK - MongoDB, Express, Angular.js e Node.js.
 
-##Uso
+## Uso
 
 1.Instalar
-
     `npm install`
     
     MongoDB
 
 2.Executar
-
     `node app`
     `mongod`
